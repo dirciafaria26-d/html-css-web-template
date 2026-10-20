@@ -4,266 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Development Template</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            background: #172033;
-            padding: 15px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .logo {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .nav-list {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-list a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-list a:hover {
-            color: #60a5fa;
-        }
-
-        .rightNav {
-            display: flex;
-            gap: 8px;
-            margin-top: 5px;
-        }
-
-        #search {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 140px;
-        }
-
-        .btn {
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-            background: #2563eb;
-            color: white;
-            cursor: pointer;
-        }
-
-        .firstsection {
-            background: #e8f1ff;
-        }
-
-        .secondsection {
-            background: #f0fdf4;
-        }
-
-        .box-main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 1100px;
-            min-height: 350px;
-            margin: auto;
-            padding: 50px 25px;
-        }
-
-        .firstHalf {
-            width: 100%;
-        }
-
-        .text-big {
-            font-size: 34px;
-            margin-bottom: 15px;
-            color: #172033;
-        }
-
-        .text-small {
-            font-size: 17px;
-            color: #444;
-        }
-
-        .section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            max-width: 1100px;
-            margin: auto;
-            padding: 60px 25px;
-        }
-
-        .section-Left {
-            flex-direction: row-reverse;
-        }
-
-        .paras {
-            flex: 1;
-        }
-
-        .thumbnail {
-            flex: 0 0 35%;
-        }
-
-        .thumbnail img {
-            display: block;
-            width: 100%;
-            border-radius: 15px;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        footer {
-            background: #172033;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-list {
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .section,
-            .section-Left {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .thumbnail {
-                width: 100%;
-                max-width: 350px;
-            }
-
-            .text-big {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <title>My Website Template</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header -->
+    <header class="header">
+        <h1>Welcome to My Website</h1>
+        <p>A simple and modern website template</p>
+    </header>
+
+    <!-- Navigation Menu -->
     <nav class="navbar">
-        <div class="logo">WebLearn</div>
-
-        <ul class="nav-list">
-            <li><a href="#web">Web Technology</a></li>
-            <li><a href="#program">C Programming</a></li>
-            <li><a href="#course">Courses</a></li>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-
-        <form class="rightNav" id="searchForm">
-            <input type="text" id="search" placeholder="Search..." aria-label="Search">
-            <button class="btn" type="submit">Search</button>
-        </form>
     </nav>
 
-    <!-- Web Technology Section -->
-    <section class="firstsection" id="web">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big">Web Technology</h1>
-                <p class="text-small">
-                    HTML stands for HyperText Markup Language. It is used to
-                    structure web pages. CSS stands for Cascading Style Sheets
-                    and controls the appearance of a website, including colors,
-                    spacing, fonts, and layout. Together, HTML and CSS help
-                    developers create attractive and user-friendly websites.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- C Programming Section -->
-    <section class="secondsection" id="program">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big">C Programming</h1>
-                <p class="text-small">
-                    C is a procedural programming language developed by
-                    Dennis Ritchie. It is widely used in system programming,
-                    operating systems, and embedded applications. C provides
-                    efficient performance and allows programmers to work
-                    closely with computer memory.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Java Section -->
-    <section class="section section-Left" id="course">
-        <div class="paras">
-            <h1 class="text-big">Java Programming</h1>
-            <p class="text-small">
-                Java is a popular object-oriented programming language.
-                Java source code is compiled into bytecode, which runs on
-                the Java Virtual Machine (JVM). This allows Java programs
-                to work on different operating systems that support a JVM.
-                Java is commonly used for web applications, desktop software,
-                and enterprise systems.
+    <!-- Main Content -->
+    <main id="home">
+        <section class="content" id="about">
+            <h2>About Us</h2>
+            <p>
+                Welcome to our website. We share information about
+                web technology, design, and programming.
             </p>
-        </div>
+        </section>
 
-        <div class="thumbnail">
-            <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-                alt="Laptop on a desk">
-        </div>
-    </section>
+        <section class="content" id="services">
+            <h2>Our Services</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Web Design</h3>
+                    <p>Creating attractive and user-friendly websites.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Development</h3>
+                    <p>Building websites using HTML and CSS.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Support</h3>
+                    <p>Helping users with website-related questions.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content" id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: hello@example.com</p>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>Copyright &copy; 2026 WebLearn. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2026 My Website. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById("searchForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const query = document.getElementById("search").value.trim();
-
-            if (query) {
-                alert("You searched for: " + query);
-            } else {
-                alert("Please enter a search term.");
-            }
-        });
-    </script>
 
 </body>
 </html>
